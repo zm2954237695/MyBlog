@@ -2,6 +2,8 @@ package com.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.blog.entity.Blog;
+import com.blog.entity.BlogAndTag;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.mybatis.spring.annotation.MapperScan;
@@ -22,7 +24,6 @@ public interface BlogMapper extends BaseMapper<Blog> {
     Blog getDetailedBlog(Long id);
 
 
-    @Select("select * from t_blog")
     List<Blog> getAllBlog();
 
 
@@ -38,4 +39,16 @@ public interface BlogMapper extends BaseMapper<Blog> {
     List<Blog> getByTagId(Long id);
 
     List<Blog> getTypeById(Long id);
+
+    Blog getBlogById(Long id);
+
+    List<Blog> searchBlog(Blog blog);
+
+    @Delete("delete from t_blog where id=#{id}")
+    int deleteBlog(Long id);
+    int saveBlog(Blog blog);
+
+    int  saveBlogAndTag(BlogAndTag blogAndTag);
+
+    int updateBlog(Blog blog);
 }

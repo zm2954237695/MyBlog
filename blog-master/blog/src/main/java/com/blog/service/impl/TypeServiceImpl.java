@@ -21,4 +21,14 @@ public class TypeServiceImpl  implements TypeService {
     public List<Type> getBlogType() {
         return typeMapper.getBlogType();
     }
+
+    @Override
+    public List<Type> getAllType() {
+        return typeMapper.getAllType();
+    }
+
+    @Override
+    public Type getType(Long id) {
+        return typeMapper.getType(id);
+    }
 }

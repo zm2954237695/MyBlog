@@ -27,4 +27,14 @@ public interface BlogService {
     List<Blog> getByTagId(Long id);
 
     List<Blog> getTypeById(Long id);
+
+    Blog getBlogById(Long id);
+
+    List<Blog> searchBlogs(Blog blog);
+
+    int deleteBlog(Long id);
+
+    int saveBlog(Blog blog);
+
+    int updateBlog(Blog blog);
 }

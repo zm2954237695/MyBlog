@@ -1,11 +1,14 @@
 package com.blog.service.impl;
 
 import com.blog.entity.Blog;
+import com.blog.entity.BlogAndTag;
+import com.blog.entity.Tag;
 import com.blog.mapper.BlogMapper;
 import com.blog.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,5 +65,48 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public List<Blog> getTypeById(Long id) {
         return blogMapper.getTypeById(id);
+    }
+
+    @Override
+    public Blog getBlogById(Long id) {
+        return blogMapper.getBlogById(id);
+    }
+
+    @Override
+    public List<Blog> searchBlogs(Blog blog) {
+        return blogMapper.searchBlog(blog);
+    }
+
+    @Override
+    public int deleteBlog(Long id) {
+        return blogMapper.deleteBlog(id);
+    }
+
+    @Override
+    public int saveBlog(Blog blog) {
+         blog.setCreateTime(new Date());
+         blog.setUpdateTime(new Date());
+         blog.setViews(0);
+         blogMapper.saveBlog(blog);
+         Long id = blog.getId();
+         List<Tag> tags = blog.getTags();
+        BlogAndTag blogAndTag = null;
+        for(Tag tag:tags){
+            blogAndTag  = new BlogAndTag(tag.getId(),id);
+            blogMapper.saveBlogAndTag(blogAndTag);
+        }
+         return 1;
+    }
+
+    @Override
+    public int updateBlog(Blog blog) {
+        blog.setUpdateTime(new Date());
+        List<Tag> tags = blog.getTags();
+        BlogAndTag blogAndTag = null;
+        for(Tag tag:tags){
+            blogAndTag  = new BlogAndTag(tag.getId(),blog.getId());
+            blogMapper.saveBlogAndTag(blogAndTag);
+        }
+        return blogMapper.updateBlog(blog);
     }
 }

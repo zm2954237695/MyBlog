@@ -21,4 +21,5 @@
         where t.id = b.type_id
     </select>
 
+
 </mapper>

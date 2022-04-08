@@ -59,6 +59,9 @@ public class IndexController {
 
          PageHelper.startPage(pagenum,5);
          List<Blog> searchBlog = blogService.getSearchBlog(query);
+         PageInfo pageInfo  = new PageInfo(searchBlog);
+         model.addAttribute("pageInfo",pageInfo);
+         model.addAttribute("query",query);
          return "search";
      }
 

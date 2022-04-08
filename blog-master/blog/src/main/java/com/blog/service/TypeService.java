@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface TypeService  {
     List<Type> getBlogType();
+
+    List<Type> getAllType();
+
+    Type getType(Long id);
 }

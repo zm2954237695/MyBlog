@@ -38,7 +38,28 @@
             <result property="name" column="tagname"/>
         </collection>
     </resultMap>
-     <select id="getSearchBlog" resultMap="blog">
+    <insert id="saveBlog" parameterType="com.blog.entity.Blog" useGeneratedKeys="true"
+    keyProperty="id">
+        insert into t_blog (title, content, first_picture, flag,
+                            views, appreciation, share_statement, commentabled,published,
+                            recommend, create_time, update_time, type_id, tag_ids, user_id, description)
+        values (#{title}, #{content}, #{firstPicture}, #{flag}, #{views}, #{appreciation},
+                #{shareStatement}, #{commentabled}, #{published}, #{recommend}, #{createTime},
+                #{updateTime}, #{typeId}, #{tagIds}, #{userId}, #{description});
+
+    </insert>
+    <insert id="saveBlogAndTag" parameterType="com.blog.entity.BlogAndTag">
+        insert into t_blog_tags ( tag_id, blog_id) values  (#{tagId},#{blogId})
+    </insert>
+    <update id="updateBlog" parameterType="com.blog.entity.Blog">
+        update t_blog set published = #{published},flag = #{flag} ,
+                          title = #{title}, content = #{content}, type_id = #{typeId}, tag_ids = #{tagIds},
+                          first_picture = #{firstPicture} , description = #{description} , recommend = #{recommend} ,
+                          share_statement = #{shareStatement}, appreciation = #{appreciation},
+                          commentabled = #{commentabled} ,update_time = #{updateTime} where id = #{id};
+
+    </update>
+    <select id="getSearchBlog" resultMap="blog">
           <bind name="pattern" value="'%' + query + '%' "/>
          select b.id,b.title,b.first_picture,b.views,
                 b.update_time,b.description,
@@ -97,5 +118,39 @@
           where b.type_id = t.id and b.user_id = u.id and b.type_id = #{typeId}
           order by b.update_time desc
 
+    </select>
+    <select id="getAllBlog" resultMap="blog">
+        select b.id,b.title,b.create_time,b.update_time,b.recommend,b.type_id,b.published,
+               t.id typeid,t.name typename
+        from t_blog b,t_type t
+        where b.type_id = t.id
+    </select>
+    <select id="getBlogById" resultMap="blog">
+        select b.id,b.published,b.flag,b.first_picture,b.type_id,b.content,b.tag_ids,
+               b.description,b.recommend,b.share_statement,b.appreciation,b.commentabled,
+               b.title
+        from t_blog b
+        where b.id = #{id}
+    </select>
+    <select id="searchBlog"  parameterType="com.blog.entity.Blog" resultMap="blog">
+          <bind name="pattern" value=" '%' + title + '%' "/>
+           select  b.id,b.title,b.update_time,b.recommend,b.published,b.type_id,t.id,
+                  t.name
+           from t_blog b,t_type t
+          <where>
+              <if test=" 1 == 1 ">
+                  b.type_id = t.id
+              </if>
+              <if test=" typeId != null">
+                  and b.type_id=#{typeId}
+              </if>
+              <if test="recommend != null">
+                  and b.recommend=#{recommend}
+              </if>
+              <if test="title != null">
+                   and b.title like #{pattern}
+              </if>
+
+          </where>
     </select>
 </mapper>

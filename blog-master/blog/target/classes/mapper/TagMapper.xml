@@ -15,6 +15,12 @@
             <result property="title" column="title"/>
         </collection>
     </resultMap>
+    <insert id="saveTag" parameterType="com.blog.entity.Tag">
+        insert into  t_tag values (#{id},#{name})
+    </insert>
+    <update id="updateTag" parameterType="com.blog.entity.Tag">
+        update t_tag set name = #{name} where id = #{id}
+    </update>
 
     <select id="getBlogTag" resultMap="tags">
         select t.id tid , t.name tname ,b.id bid ,b.title

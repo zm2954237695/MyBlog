@@ -19,16 +19,26 @@
             <id property="id" column="id"/>
         </association>
     </resultMap>
+    <insert id="saveComment" parameterType="com.blog.entity.Comment">
+       insert into  t_comment (nickname, email, content, avatar, create_time, blog_id, parent_comment_id, admincomment)
+       values (#{nickname}, #{email}, #{content}, #{avatar}, #{createTime}, #{blogId}, #{parentCommentId}, #{adminComment})
 
-    <select id="findByBlogIdAndParentCommentNull" resultMap="comment">
+
+    </insert>
+
+    <select id="getCommentByBlogId" resultMap="comment">
         select c.id cid,c.nickname,c.email,c.content,c.avatar,
                c.create_time,c.blog_id,c.parent_comment_id
         from t_comment c, t_blog b
         where c.blog_id = b.id and c.blog_id = #{blogId} and c.parent_comment_id = #{blogParentId}
         order by c.create_time desc
     </select>
-
-
+    <select id="findByParentCommentId" resultMap="comment">
+        select c.id cid,c.nickname ,c.content,c.email,c.avatar,c.create_time,
+               c.blog_id,c.parent_comment_id
+        from t_comment c
+        where c.parent_comment_id = #{parentCommentId}
+    </select>
 
 
 </mapper>
