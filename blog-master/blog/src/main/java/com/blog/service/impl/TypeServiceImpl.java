@@ -31,4 +31,24 @@ public class TypeServiceImpl  implements TypeService {
     public Type getType(Long id) {
         return typeMapper.getType(id);
     }
+
+    @Override
+    public Type getTypeByName(String name) {
+        return typeMapper.getTypeByName(name);
+    }
+
+    @Override
+    public int saveType(Type type) {
+        return typeMapper.saveType(type);
+    }
+
+    @Override
+    public int updateType(Type type) {
+        return typeMapper.updateType(type);
+    }
+
+    @Override
+    public int deleteById(Long id) {
+        return typeMapper.deleteById(id);
+    }
 }

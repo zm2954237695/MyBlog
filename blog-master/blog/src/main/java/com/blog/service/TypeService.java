@@ -11,4 +11,12 @@ public interface TypeService  {
     List<Type> getAllType();
 
     Type getType(Long id);
+
+    Type getTypeByName(String name);
+
+    int saveType(Type type);
+
+    int updateType(Type type);
+
+    int deleteById(Long id);
 }

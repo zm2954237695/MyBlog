@@ -5,57 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf601637-8e4a-419a-b609-430e1bad375e" name="变更" comment="blog">
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/admin/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/admin/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/admin/TagController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/utils/MD5Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/admin/TypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/handler/ControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d629d69b-8beb-4a28-8d4d-1f17701a2357.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d629d69b-8beb-4a28-8d4d-1f17701a2357.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_4_8_23_17____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_4_8_23_17____.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_4_8_23_29____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_4_8_23_29____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/entity/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/TagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/TagMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/TagShowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/controller/TypeShowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/TypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/mapper/TypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/TagService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/TypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/TagServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/java/com/blog/service/impl/TypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/TagMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/TagMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/TypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/mapper/commentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/entity/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/entity/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/BlogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/BlogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/CommentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/TagMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/TagMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/TagController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/controller/TypeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/TypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/mapper/TypeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/BlogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/TagService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/TypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/BlogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/TagServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/com/blog/service/impl/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/TagMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/TagMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/TypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/mapper/commentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-master/blog/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-master/blog/target/classes/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +138,7 @@
       <workItem from="1649345172942" duration="2545000" />
       <workItem from="1649347759903" duration="963000" />
       <workItem from="1649406264263" duration="15930000" />
+      <workItem from="1649501160788" duration="4142000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1649406539671</created>
@@ -179,7 +147,35 @@
       <option name="project" value="LOCAL" />
       <updated>1649406539671</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="blog">
+      <created>1649431820332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649431820332</updated>
+    </task>
+    <task id="LOCAL-00003" summary="blog">
+      <created>1649431832905</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649431832905</updated>
+    </task>
+    <task id="LOCAL-00004" summary="blog">
+      <created>1649431847276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649431847276</updated>
+    </task>
+    <task id="LOCAL-00005" summary="blog">
+      <created>1649431875644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649431875644</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

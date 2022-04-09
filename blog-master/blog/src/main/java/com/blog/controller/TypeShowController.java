@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class TypeController {
+public class TypeShowController {
 
     @Autowired
     private BlogService blogService;
